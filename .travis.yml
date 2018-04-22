@@ -21,6 +21,7 @@ before_install:
 
 env:
   - DB=mysql:5.7
+  - DB=mysql:8.0
   - DB=mariadb:5.5
   - DB=mariadb:10.0
   - DB=mariadb:10.1
