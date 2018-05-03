@@ -1,4 +1,7 @@
 sudo: true
+os:
+  - linux
+  - linux-ppc64le
 language: c
 services: docker
 addons:
