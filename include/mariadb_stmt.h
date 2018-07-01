@@ -38,7 +38,7 @@
 { \
   (a)->last_errno= (b);\
   strncpy((a)->sqlstate, (c), sizeof((a)->sqlstate));\
-  strncpy((a)->last_error, (d) ? (d) : ER((b)), sizeof((a)->last_error));\
+  strncpy((a)->last_error, (d), sizeof((a)->last_error));\
 }
 
 #define CLEAR_CLIENT_STMT_ERROR(a) \
