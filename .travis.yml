@@ -39,13 +39,9 @@ matrix:
   include:
     - env: DB=build
       compiler: gcc
-    - env:
-        - DB=build
-        - CC=gcc-8
+    - env: DB=build
       compiler: gcc-8
-    - env:
-        - DB=build
-        - CC=clang-7
+    - env: DB=build
       compiler: clang-7
     - env: DB=mysql:5.7
     - env: DB=mariadb:5.5
