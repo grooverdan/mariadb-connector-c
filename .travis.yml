@@ -11,7 +11,7 @@ addons:
     - mariadb.example.com
   apt:
     sources:
-      - sourceline: 'ppa:ubuntu-toolchain-r'
+      - ubuntu-toolchain-r
       - llvm-toolchain-trusty-7
     packages:
       - clang-7
