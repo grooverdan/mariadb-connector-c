@@ -35,7 +35,7 @@ matrix:
   include:
     - env: DB=build
       compiler: gcc
-    - env: DB=build
+    - env: DB=build CFLAGS='-Wimplicit-fallthrough=2'
       compiler: gcc-8
     - env: DB=build CFLAGS='-Wno-unused-command-line-argument'
       compiler: clang-7
