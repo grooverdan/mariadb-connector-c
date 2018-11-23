@@ -23,11 +23,16 @@ before_install:
   - export SSLCERT=$PROJ_PATH/tmp
 matrix:
   allow_failures:
-    - env: DB=build
     - env: SERVER_BRANCH=10.4
     - env: SERVER_BRANCH=10.4 TEST_OPTION=--ps-protocol
   include:
     - env: DB=build
+      compiler: gcc
+    - env: DB=build
+      compiler: clang
+    - env: DB=build
+      compiler: gcc
+      os: linux-ppc64le
     - env: DB=mysql:5.7
     - env: DB=mariadb:5.5
     - env: DB=mariadb:10.0
