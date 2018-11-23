@@ -41,7 +41,7 @@ matrix:
       compiler: gcc
     - env: DB=build
       compiler: gcc-8
-    - env: DB=build
+    - env: DB=build CFLAGS='-Wno-unused-command-line-argument'
       compiler: clang-7
     - env: DB=mysql:5.7
     - env: DB=mariadb:5.5
