@@ -28,8 +28,20 @@ matrix:
   include:
     - env: DB=build
       compiler: gcc
-    - env: DB=build
-      compiler: clang-7
+    - env:
+        - DB=build
+        - CC=gcc-8
+      compiler: gcc-8
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - gcc-8
+    - env:
+        - DB=build
+        - CC=clang-7
+      compiler: clang
       addons:
         apt:
           sources:
