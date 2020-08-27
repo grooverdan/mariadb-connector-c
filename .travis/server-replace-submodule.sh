@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # get latest server
-git clone -b ${SERVER_BRANCH} https://github.com/mariadb/server ../workdir-server
+git clone  --single-branch --depth 1 -b ${SERVER_BRANCH} https://github.com/mariadb/server ../workdir-server
 
 cd ../workdir-server
 # don't pull in submodules. We want the latest C/C as libmariadb
